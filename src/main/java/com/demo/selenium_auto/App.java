@@ -18,7 +18,7 @@ public class App
         System.setProperty("webdriver.chrome.driver", "/Users/debjotysil/Documents/software/ChromeDriver.app");
 
         ChromeOptions chromeOptions = new ChromeOptions();
-        
+        chromeOptions.addArguments("--headless");
         // Initialize ChromeDriver
         WebDriver driver = new ChromeDriver(chromeOptions);
 
