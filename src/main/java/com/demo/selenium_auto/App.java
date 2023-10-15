@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 /**
  * Hello world!
  *
@@ -15,13 +17,13 @@ public class App
     public static void main( String[] args )
     {
         // Set the path to the ChromeDriver executable
-        System.setProperty("webdriver.chrome.driver", "/Users/debjotysil/Documents/software/ChromeDriver.app");
-
+        //System.setProperty("webdriver.chrome.driver", "/Users/debjotysil/Documents/software/chromedriver");
+    	WebDriverManager.chromedriver().setup();
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--headless");
         // Initialize ChromeDriver
         WebDriver driver = new ChromeDriver(chromeOptions);
-
+        
         // Navigate to Facebook
         driver.get("https://www.facebook.com");
 
